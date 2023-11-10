@@ -89,6 +89,9 @@
                                         <th>
                                             PROCESO  
                                            </th>
+                                           <th>
+                                           tip_tipo_doc
+                                           </th>
                                         <th>
                                          Doc_nombre
                                         </th>
@@ -116,10 +119,10 @@
                                         </td>
 
                                        <td> <div>
-                                            {{$item->proceso->pro_nombre}}
+                                            {{$item->proceso->pro_prefijo}} -  {{$item->proceso->pro_nombre}}
                                         </div></td>
                                         <td> <div>
-                                            {{$item->tip_tipo_doc->tip_nombre}}
+                                            {{$item->tip_tipo_doc->tip_prefijo}} -  {{$item->tip_tipo_doc->tip_nombre}}
                                         </div></td>
                                        
 

@@ -66,7 +66,7 @@
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" href="#collapseOne{{$contador}}">
 
                             <td class="" style="color: red;">
-                                proceso {{ $item['nombre'] }}
+                                proceso {{ $item['pro_nombre'] }} --{{ $item['pro_prefijo']}}
                             </td>
                         </button>
                     </h2>

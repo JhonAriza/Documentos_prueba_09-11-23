@@ -21,6 +21,8 @@
  {{ Session::get('mensaje') }}
 
 @endif
+
+
 </html>
  <div class="row"> 
 

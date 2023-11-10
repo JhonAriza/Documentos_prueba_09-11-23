@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 class Doc_documentoController extends Controller
 {
-    public $search = ' ';
+
    public $busqueda = '';
     /**
      * Display a listing of the resource.
@@ -65,11 +65,26 @@ class Doc_documentoController extends Controller
      public function store(Request $request)
      { // del formulario se envian todos los datos al metodo store
          // aca responde si realmente la informacion esta llegando  
-         // datos del documento va aser igual a todos los datos que envien 
-  
+         // se valida para validar que las llaves foraneas no existan en los documentos creados 
+         //los  datos del documento van aser igual a todos los datos que envien
+         $proceso_id   = $request->input('proceso_id');
+         $tip_tipo_doc_id   = $request->input('tip_tipo_doc_id');
+
+         
+         if (Doc_documento::where('proceso_id', $proceso_id)->exists()) {
+            // El proceso ya está asociado a un documento , redirigir  a index
+            return redirect()->route('doc_documentos.index')->with('mensaje', 'Este proceso proceso_id  ya ha sido asociado con un documento.');
+        }  if (Doc_documento::where('tip_tipo_doc_id', $tip_tipo_doc_id)->exists()) {
+         
+            return redirect()->route('doc_documentos.index')->with('mensaje', 'Este proceso tip_tipo_doc_id ya ha sido asociado con un documento.');
+        }
+
+        
+
+        
          $datos = request()->except(['_token']);
-         // se recolectan todos los datos del formulario se le quita la llave del token 
-         // se agarra el modelo Doc_documento  y se inserta toda la informacion en la base de datos  
+         // se recolectan todos los datos del formulario y se   quita la llave del token 
+         // se optiene  el modelo Doc_documento  y se inserta toda la informacion en la base de datos  
          Doc_documento::insert($datos);
          return redirect('doc_documentos')->with('mensaje','Doc_documentos registrado con exito');
      }

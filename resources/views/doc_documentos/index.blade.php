@@ -34,7 +34,7 @@
         <div class="col">
             <div class="btn-group" role="group" aria-label="Basic outlined example">
 
-                <a type="button" href=" {{url('doc_documentos/create')}}" class="btn btn-outline-warning">+documentos +</a>
+                <a type="button" href=" {{url('doc_documentos/create')}}" class="btn btn-outline-warning">+crear documentos +</a>
             </div>
         </div>
         <div class="col"></div>

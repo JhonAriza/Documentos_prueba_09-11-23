@@ -24,10 +24,11 @@
     </div>  
     <div class="col-6">
         <label for="doc_contenido">doc_contenido</label>
-        <input type="text" class="form-control" required name="doc_contenido" id="doc_contenido" value="{{ isset($item->doc_contenido)?$item->doc_contenido:'' }}">
+        <textarea class="form-control" required name="doc_contenido" id="doc_contenido" rows="10">{{ isset($item->doc_contenido) ? $item->doc_contenido : '' }}</textarea>
         <div class="valid-feedback">Cargando..</div>
         <div class="invalid-feedback">Falta llenar el campo doc_contenido</div>
-    </div>  
+    </div>
+    
 
  
     

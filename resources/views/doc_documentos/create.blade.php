@@ -25,7 +25,6 @@
  <div class="row"> 
 
     <div class="col-2"></div>
-<h3> si no se crea es por que Este proceso ya ha sido asociado con un documento</h3>
     <div class="col-2"></div>
     <div class="col-2"></div>
     <div class="col-2"></div>

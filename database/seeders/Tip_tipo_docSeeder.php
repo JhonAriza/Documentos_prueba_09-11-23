@@ -30,6 +30,10 @@ class Tip_tipo_docSeeder extends Seeder
             'tip_nombre'=> 'NORMAS',
             'tip_prefijo' => 'NOR'
         ]);
+        Tip_tipo_doc::create([
+            'tip_nombre'=> 'MOLAN',
+            'tip_prefijo' => 'MOL'
+        ]);
      
     }
 }

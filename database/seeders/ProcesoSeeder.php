@@ -30,6 +30,10 @@ class ProcesoSeeder extends Seeder
             'pro_prefijo' => 'ARIT',
             'pro_nombre'=> 'ARITMETICA'
         ]);
+        Proceso::create([
+            'pro_prefijo' => 'TUE',
+            'pro_nombre'=> 'MATETUETID'
+        ]);
      
     }
 }
